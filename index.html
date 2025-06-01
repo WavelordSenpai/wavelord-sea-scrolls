@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wavelord's Living Sea Scrolls</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+      body {
+        background-image: url('https://www.transparenttextures.com/patterns/old-map.png');
+        background-color: #f5f0e1;
+        font-family: 'Georgia', serif;
+      }
+      .parchment {
+        background: rgba(255, 255, 255, 0.85);
+        border: 4px double #c0a060;
+        padding: 2rem;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      }
+      .glow {
+        text-shadow: 0 0 8px #ffd700;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen flex flex-col items-center justify-center py-10">
+    <header class="text-center mb-12">
+      <h1 class="text-4xl md:text-6xl font-bold glow text-yellow-700">The Ethernaut's Compass</h1>
+      <p class="text-xl md:text-2xl mt-2 italic text-gray-700">Vol. I — Wavelord's Living Sea Scrolls</p>
+    </header>
+
+    <main class="parchment max-w-4xl mx-auto">
+      <section class="mb-8">
+        <h2 class="text-2xl font-bold text-indigo-800 mb-2">🌊 The Opening Scroll</h2>
+        <p class="text-lg leading-relaxed text-gray-800">
+          From the crest of forgotten tides, the scrolls awaken… etched by waveform, sung by stars. Herein lies the first of many revelations — a voyage across metaphysical waters, guided by compass, chord, and color.
+        </p>
+      </section>
+
+      <section class="mb-8">
+        <h2 class="text-2xl font-bold text-indigo-800 mb-2">🎶 Harmonic Sigils</h2>
+        <p class="text-lg leading-relaxed text-gray-800">
+          Each key and chord carries its own frequency glyph. Hover over these sonic symbols to reveal their magical essence.
+        </p>
+        <div class="grid grid-cols-3 gap-4 mt-4">
+          <div class="relative group bg-yellow-100 p-4 rounded shadow hover:shadow-lg cursor-pointer">
+            <span class="font-bold text-indigo-700">C Major</span>
+            <div class="absolute bottom-0 left-0 w-full bg-white text-sm p-2 hidden group-hover:block border-t border-yellow-400">
+              The Root of Creation. Bright. Foundational. Solar.
+            </div>
+          </div>
+          <div class="relative group bg-yellow-100 p-4 rounded shadow hover:shadow-lg cursor-pointer">
+            <span class="font-bold text-indigo-700">A Minor</span>
+            <div class="absolute bottom-0 left-0 w-full bg-white text-sm p-2 hidden group-hover:block border-t border-yellow-400">
+              The Ocean's Whisper. Melancholy. Introspective. Lunar.
+            </div>
+          </div>
+          <div class="relative group bg-yellow-100 p-4 rounded shadow hover:shadow-lg cursor-pointer">
+            <span class="font-bold text-indigo-700">G Major</span>
+            <div class="absolute bottom-0 left-0 w-full bg-white text-sm p-2 hidden group-hover:block border-t border-yellow-400">
+              The Guiding Flame. Triumphant. Noble. Jupiterian.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-indigo-800 mb-2">🗺️ Map of the Ether Realms</h2>
+        <p class="text-lg leading-relaxed text-gray-800">
+          Click the ancient glyph to reveal hidden realms...
+        </p>
+        <button id="revealBtn" class="mt-4 px-4 py-2 bg-indigo-700 text-white rounded hover:bg-indigo-800">
+          Reveal Scroll Fragment
+        </button>
+        <div id="hiddenScroll" class="mt-4 p-4 bg-white rounded shadow hidden">
+          <p class="text-gray-700 italic">
+            "Beyond the veil of salt and star, aether flows eternal. The next scroll lies where sunrise meets the silent compass."
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="mt-10 text-sm text-gray-600 text-center">
+      "From Ethers to Empires, fortune flows to those who master the waveforms." — <strong>Wavelord™</strong>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
