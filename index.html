@@ -3,86 +3,176 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wavelord's Living Sea Scrolls</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Vol I — Living Sea Scrolls</title>
+
+    <!-- Tailwind via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Parchment background -->
     <style>
       body {
         background-image: url('https://www.transparenttextures.com/patterns/old-map.png');
         background-color: #f5f0e1;
         font-family: 'Georgia', serif;
       }
+
       .parchment {
         background: rgba(255, 255, 255, 0.85);
         border: 4px double #c0a060;
         padding: 2rem;
-        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        animation: fadeIn 1s ease-in-out;
       }
-      .glow {
-        text-shadow: 0 0 8px #ffd700;
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .back-link {
+        color: #4f46e5;
+      }
+      .back-link:hover {
+        text-decoration: underline;
       }
     </style>
   </head>
-  <body class="min-h-screen flex flex-col items-center justify-center py-10">
-    <header class="text-center mb-12">
-      <h1 class="text-4xl md:text-6xl font-bold glow text-yellow-700">The Ethernaut's Compass</h1>
-      <p class="text-xl md:text-2xl mt-2 italic text-gray-700">Vol. I — Wavelord's Living Sea Scrolls</p>
+
+  <body class="min-h-screen flex flex-col items-center justify-start py-10">
+    <header class="text-center mb-8">
+      <h1 class="text-3xl md:text-5xl font-bold text-indigo-800">
+        Vol I: Living Sea Scrolls
+      </h1>
+      <p class="text-lg text-gray-700 mt-2">
+        A companion guide to The Ethernaut’s Compass
+      </p>
     </header>
 
-    <main class="parchment max-w-4xl mx-auto">
-      <section class="mb-8">
-        <h2 class="text-2xl font-bold text-indigo-800 mb-2">🌊 The Opening Scroll</h2>
-        <p class="text-lg leading-relaxed text-gray-800">
-          From the crest of forgotten tides, the scrolls awaken… etched by waveform, sung by stars. Herein lies the first of many revelations — a voyage across metaphysical waters, guided by compass, chord, and color.
+    <main class="parchment max-w-3xl mx-auto space-y-8">
+      <section>
+        <h2 class="text-2xl font-bold text-indigo-800 mb-2">
+          Scroll of the Tides
+        </h2>
+        <p class="text-gray-800 leading-relaxed">
+          In the beginning, the sea and sky were one—an undulating tapestry of
+          light and shadow. This scroll guides you through the first harmonic,
+          where chords become currents and frequencies forge destiny.
         </p>
       </section>
 
-      <section class="mb-8">
-        <h2 class="text-2xl font-bold text-indigo-800 mb-2">🎶 Harmonic Sigils</h2>
-        <p class="text-lg leading-relaxed text-gray-800">
-          Each key and chord carries its own frequency glyph. Hover over these sonic symbols to reveal their magical essence.
+      <section>
+        <h2 class="text-2xl font-bold text-indigo-800 mb-2">
+          Embedded Audio Fragment
+        </h2>
+        <p class="text-gray-800">
+          Listen to the first chord of creation, captured in a loop. Feel its
+          resonance as you read.
         </p>
-        <div class="grid grid-cols-3 gap-4 mt-4">
-          <div class="relative group bg-yellow-100 p-4 rounded shadow hover:shadow-lg cursor-pointer">
-            <span class="font-bold text-indigo-700">C Major</span>
-            <div class="absolute bottom-0 left-0 w-full bg-white text-sm p-2 hidden group-hover:block border-t border-yellow-400">
-              The Root of Creation. Bright. Foundational. Solar.
-            </div>
-          </div>
-          <div class="relative group bg-yellow-100 p-4 rounded shadow hover:shadow-lg cursor-pointer">
-            <span class="font-bold text-indigo-700">A Minor</span>
-            <div class="absolute bottom-0 left-0 w-full bg-white text-sm p-2 hidden group-hover:block border-t border-yellow-400">
-              The Ocean's Whisper. Melancholy. Introspective. Lunar.
-            </div>
-          </div>
-          <div class="relative group bg-yellow-100 p-4 rounded shadow hover:shadow-lg cursor-pointer">
-            <span class="font-bold text-indigo-700">G Major</span>
-            <div class="absolute bottom-0 left-0 w-full bg-white text-sm p-2 hidden group-hover:block border-t border-yellow-400">
-              The Guiding Flame. Triumphant. Noble. Jupiterian.
-            </div>
-          </div>
+        <audio id="bgAudio" autoplay loop class="mt-4 w-full">
+          <source src="assets/audio/main-theme.mp3" type="audio/mpeg" />
+          Your browser does not support the <code>audio</code> element.
+        </audio>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-indigo-800 mb-2">
+          Choose Your Ambient Track
+        </h2>
+        <div class="flex flex-col sm:flex-row gap-2 mt-2">
+          <button
+            onclick="switchAudio('main-theme')"
+            class="bg-indigo-100 hover:bg-indigo-300 px-4 py-2 rounded"
+          >
+            Main Theme
+          </button>
+          <button
+            onclick="switchAudio('mystic-waters')"
+            class="bg-blue-100 hover:bg-blue-300 px-4 py-2 rounded"
+          >
+            Mystic Waters
+          </button>
+          <button
+            onclick="switchAudio('celestial-drift')"
+            class="bg-purple-100 hover:bg-purple-300 px-4 py-2 rounded"
+          >
+            Celestial Drift
+          </button>
         </div>
       </section>
 
       <section>
-        <h2 class="text-2xl font-bold text-indigo-800 mb-2">🗺️ Map of the Ether Realms</h2>
-        <p class="text-lg leading-relaxed text-gray-800">
-          Click the ancient glyph to reveal hidden realms...
-        </p>
-        <button id="revealBtn" class="mt-4 px-4 py-2 bg-indigo-700 text-white rounded hover:bg-indigo-800">
-          Reveal Scroll Fragment
-        </button>
-        <div id="hiddenScroll" class="mt-4 p-4 bg-white rounded shadow hidden">
-          <p class="text-gray-700 italic">
-            "Beyond the veil of salt and star, aether flows eternal. The next scroll lies where sunrise meets the silent compass."
-          </p>
+        <h2 class="text-2xl font-bold text-indigo-800 mb-2">
+          Sacred Geometry Glyph
+        </h2>
+        <div class="flex justify-center mb-4">
+          <img
+            src="assets/images/geo-glyph.png"
+            alt="Sacred Geometry"
+            class="w-48 h-48 cursor-pointer transition-transform duration-300 hover:scale-110"
+            onclick="openModal('assets/images/geo-glyph.png')"
+          />
         </div>
+        <p class="text-gray-800 leading-relaxed">
+          This glyph represents the Metonic cycle—how lunar and solar rhythms
+          align. Meditate on its lines, for they hold the secret to unbreakable
+          harmony.
+        </p>
+      </section>
+
+      <section class="text-center">
+        <a href="index.html" class="back-link font-semibold">← Back to Home</a>
       </section>
     </main>
 
     <footer class="mt-10 text-sm text-gray-600 text-center">
-      "From Ethers to Empires, fortune flows to those who master the waveforms." — <strong>Wavelord™</strong>
+      &copy; 2025 Wavelord™ — All scrolls reserved.
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Modal for Glyph Image -->
+    <div
+      id="modal"
+      class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
+    >
+      <img
+        id="modal-img"
+        src=""
+        class="max-h-[90vh] max-w-[90vw] border-4 border-yellow-200 shadow-2xl"
+      />
+    </div>
+
+    <!-- JS Scripts -->
+    <script>
+      function switchAudio(selected) {
+        const audio = document.getElementById("bgAudio");
+        const source = audio.querySelector("source");
+
+        const audioMap = {
+          "main-theme": "assets/audio/main-theme.mp3",
+          "mystic-waters": "assets/audio/mystic-waters.mp3",
+          "celestial-drift": "assets/audio/celestial-drift.mp3",
+        };
+
+        source.src = audioMap[selected];
+        audio.load();
+        audio.play();
+      }
+
+      function openModal(src) {
+        const modal = document.getElementById("modal");
+        const img = document.getElementById("modal-img");
+        img.src = src;
+        modal.classList.remove("hidden");
+      }
+
+      document.getElementById("modal").addEventListener("click", () => {
+        document.getElementById("modal").classList.add("hidden");
+      });
+    </script>
   </body>
 </html>

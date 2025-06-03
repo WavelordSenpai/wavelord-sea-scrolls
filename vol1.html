@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vol I — Living Sea Scrolls</title>
+
+    <!-- Tailwind via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Parchment background -->
+    <style>
+      body {
+        background-image: url('https://www.transparenttextures.com/patterns/old-map.png');
+        background-color: #f5f0e1;
+        font-family: 'Georgia', serif;
+      }
+      .parchment {
+        background: rgba(255, 255, 255, 0.85);
+        border: 4px double #c0a060;
+        padding: 2rem;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      }
+      .back-link {
+        color: #4f46e5;
+      }
+      .back-link:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen flex flex-col items-center justify-start py-10">
+    <header class="text-center mb-8">
+      <h1 class="text-3xl md:text-5xl font-bold text-indigo-800">Vol I: Living Sea Scrolls</h1>
+      <p class="text-lg text-gray-700 mt-2">A companion guide to The Ethernaut’s Compass</p>
+    </header>
+
+    <main class="parchment max-w-3xl mx-auto space-y-8">
+      <section>
+        <h2 class="text-2xl font-bold text-indigo-800 mb-2">Scroll of the Tides</h2>
+        <p class="text-gray-800 leading-relaxed">
+          In the beginning, the sea and sky were one—an undulating tapestry of light and shadow.
+          This scroll guides you through the first harmonic, where chords become currents and frequencies forge destiny.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-indigo-800 mb-2">Embedded Audio Fragment</h2>
+        <p class="text-gray-800">
+          Listen to the first chord of creation, captured in a loop. Feel its resonance as you read.
+        </p>
+        <audio controls class="mt-4 w-full">
+          <source src="assets/audio/main-theme.mp3" type="audio/mpeg" />
+          Your browser does not support the <code>audio</code> element.
+        </audio>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-indigo-800 mb-2">Sacred Geometry Glyph</h2>
+        <div class="flex justify-center mb-4">
+          <img
+            src="assets/images/geo-glyph.png"
+            alt="Sacred Geometry"
+            class="w-48 h-48"
+          />
+        </div>
+        <p class="text-gray-800 leading-relaxed">
+          This glyph represents the Metonic cycle—how lunar and solar rhythms align.
+          Meditate on its lines, for they hold the secret to unbreakable harmony.
+        </p>
+      </section>
+
+      <section class="text-center">
+        <a href="index.html" class="back-link font-semibold">← Back to Home</a>
+      </section>
+    </main>
+
+    <footer class="mt-10 text-sm text-gray-600 text-center">
+      &copy; 2025 Wavelord™ — All scrolls reserved.
+    </footer>
+  </body>
+</html>
